@@ -7,13 +7,13 @@ router.get("/homepage", async (req, res, next) => {
     const updated = await komik.getKomik("manga/?status=&type=&order=update");
     const popular = await komik.getKomik("manga/?status=&type=&order=popular");
     const onGoing = await komik.getKomik("manga/status=ongoing&type=&order=");
-    const finished = await komik.getKomik("manga/?status=completed");
+    const completed = await komik.getKomik("manga/?status=completed");
     const all = await komik.getKomik("manga/?status=&type=&order=");
     return res.json({
       updated,
       popular,
       onGoing,
-      finished,
+      completed,
       all,
     });
   } catch (error) {
