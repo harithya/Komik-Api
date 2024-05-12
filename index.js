@@ -7,6 +7,8 @@ const port = process.env.PORT || 3000;
 const errorHandling = require("./app/middleware/error.middleware");
 
 require("dotenv").config();
+
+app.use(cache("1 hour"));
 const komik = require("./app/komik/komik.controller");
 app.use("/api/komik", komik);
 
