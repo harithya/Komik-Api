@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const apicache = require("apicache");
+let cache = apicache.middleware;
 const port = process.env.PORT || 3000;
 
 const errorHandling = require("./app/middleware/error.middleware");
