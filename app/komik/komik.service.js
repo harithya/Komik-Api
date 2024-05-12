@@ -45,8 +45,8 @@ const getDetailKomik = async (slug) => {
     const author = getInfoKomik($(".infox"), 0, 1);
     const updatedAt = $(".infox").find("time").text();
     const rating = $(".rating").find(".num").text();
-    const status = $(".tsinfo").find(".imptdt").eq(0).text();
-    const type = $(".tsinfo").find(".imptdt").eq(1).text();
+    const status = $(".tsinfo").find(".imptdt").eq(0).find("i").text();
+    const type = $(".tsinfo").find(".imptdt").eq(1).find("a").text();
 
     const genre = $(".mgen")
       .find("a")
